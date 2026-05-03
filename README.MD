@@ -35,11 +35,28 @@ git clone git@github.com:JairoFR/fastapi-boilerplate.git mi-nuevo-proyecto
 cd mi-nuevo-proyecto
 ```
 
-### 2️⃣ Desconecta del repo original
+### 2️⃣ Desconecta del repo original y conecta al tuyo
+
 ```bash
+# 1. Elimina la historia git del boilerplate
 rm -rf .git
+
+# 2. Inicia git limpio
 git init
+
+# 3. Ve a GitHub y crea un nuevo repositorio vacío
+#    sin README, sin .gitignore, sin nada
+#    luego copia la URL SSH que te da GitHub y úsala aquí:
 git remote add origin git@github.com:TuUsuario/mi-nuevo-proyecto.git
+
+# 4. Verifica que quedó conectado a tu repo
+git remote -v
+
+# 5. Sube el código
+git add .
+git commit -m "feat: inicio del proyecto"
+git branch -M main
+git push -u origin main
 ```
 
 ### 3️⃣ Crea el ambiente virtual
